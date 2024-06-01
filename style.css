@@ -1,0 +1,58 @@
+body{
+    font-family: monospace;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    border-radius: 5px;
+    background-color: rgba(77, 0, 73, 0.61);
+    /* margin: 10px; */
+    max-width: 100%;
+}
+/* estilo del menu de navegacion */
+
+
+nav a {
+    text-decoration: none;
+    color: rgb(207, 22, 224);
+    
+}
+nav ul{
+    list-style:none;
+    margin: 0;
+    padding: 2%;
+    
+}
+nav ul li {
+    padding: 6px;
+    margin: 10px;
+    background-color: rgb(56, 8, 48);
+    display: inline-block;
+    border-radius: 5px;
+}
+section{
+    /* background-color: lightpink; */
+    /* padding: 40px 20px;
+    margin: 20px; */
+    
+}
+
+footer{
+    padding-top: 5px;
+
+}
+
+/* Estilos personalizados */
+
+/* #skills p {
+    background-color: magenta;
+    padding: 5px;
+} */
+
+/*Responsive*/
+@media only screen and (max-width: 600px)
+{
+
+}
