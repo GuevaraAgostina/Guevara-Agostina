@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header>
+    
       <nav>
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portafolio">Portafolio</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li class="nav"><a href="#inicio">Inicio</a></li>
+          <li class="nav"><a href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav"><a href="#skills">Skills</a></li>
+          <li class="nav"><a href="#portafolio">Portafolio</a></li>
+          <li class="nav"><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
+      <header >
+          <div id="inicio">
+          <div class="text-inicio">
+            <h1>¡Hola!</h1>
+            <p>Soy Agostina</p>
+            <strong>desarroladora Full-Stack</strong>
+          </div>
+            <div >
+              <img class="img-me" src="./img/yo2.jpg" alt="Agos" width="400px" height="500px" >
+            </div>
+          </div>
     </header>
     <main>
-      <section id="#inicio">
-        <div>
-          <h1>¡Hola!</h1>
-          <p>Soy Agostina</p>
-          <strong>desarroladora Full-Stack</strong>
-        </div>
-      </section>
       <!--Presentacion-->
-      <section id="#sobre-mi">
+      <section id="sobre-mi">
         <h2>Sobre mi</h2>
         <p>
           Soy una programadora junior apasionada por la programación con
@@ -41,7 +45,7 @@
         </p>
         <div class="cv">
           <button>
-            <a href="../Ingeniería_en_Informática.pdf" target="_blank"
+            <a href="./img/Ingeniería_en_Informática.pdf" target="_blank"
               >Descargar CV</a
             >
           </button>
@@ -80,11 +84,9 @@
         </div>
         
       </section>
+
       <!--Contacto-->
-      
-    </main>
-    <footer>
-      <section id="#contacto">
+      <section id="contacto">
         <h2>Contacto</h2>
         <div class="email">
         <h4>EMAIL</h4>
@@ -110,6 +112,31 @@
               >Linkedin</a>
           </button>
         </div>
+      </section>
+
+      
+    </main>
+
+    <footer>
+      <section class="form-container">
+        <div>
+          <h2>CONTACTAME</h2>
+        </div>
+        <div >
+          <form action="">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" >
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <label for="tel">Telefono</label>
+            <input type="number" name="tel" id="tel">
+            <label for="motivo">Motivo</label>
+            <input type="text" name="motivo" id="motivo">
+            <button>Enviar</button>
+  
+          </form>
+        </div>
+        <h5>copyright Guevara Agostina</h5>
       </section>
     </footer>
   </body>
