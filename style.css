@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 /* estilo del menu de navegacion */
@@ -45,6 +46,7 @@ form {
   width: 600px; /* Ajusta este valor según sea necesario */
   margin: 0 auto; /* Esto centra el formulario horizontalmente */
   padding: 20px;
+  max-width: 600px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
@@ -74,36 +76,51 @@ textarea {
   cursor: pointer;
 }
 
-button:hover {
+.send:hover {
   background-color: #4cae4c;
 }
 .form-container h2,
 h5 {
   text-align: center;
 }
-
-/*             style to header  -ME-        */
-/* #inicio {
-  width: 100%;
-  display: flex;
-  border-bottom: 8px solid black;
-  justify-content: center;
-  padding-bottom: 1%;
+/*style to header button cv*/
+.btn a {
+  text-decoration: none;
+  color: rgb(31, 5, 5);
 }
-.text-inicio {
-  display: inline;
-  align-content: center;
-  margin-right: 3%;
+.btn {
+  width: 9em;
+  height: 3em;
+  font-size: 15px;
+  margin-top: 50px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 30em;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px  #bebcd1 , -6px -6px 12px #662549;
 }
-header {
-  margin: 5%;
-} */
-/* .img-me img {
-  /* border-radius: 50%; */
-  /* border-top: 4px solid fuchsia;
-  border-right: 8px solid fuchsia;
-  border-top-left-radius: 75%;
-} */ 
+.btn::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    #e6b1eb 0%,
+    #da0fe8 100%
+  );
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+.btn:hover::before {
+  width: 9em;
+}
 
 /*               style to footer             */
 footer {
@@ -152,19 +169,147 @@ footer {
   }
   .text-inicio {
     display: inline;
-    align-content:space-around;
+    align-content: space-around;
     margin-right: 3%;
   }
+
   header {
     margin: 5%;
   }
-  .img-me {
-    /* border-radius: 50%; */
+  /* .img-me {
+    border-radius: 50%;
     border-top: 2px solid fuchsia;
     border-right: 2px solid fuchsia;
     border-top-left-radius: 75%;
+  } */
+  .img-me {
+    cursor: pointer;
+    transition: 0.3s;
+    /* border-top: 4px solid fuchsia;
+    border-right: 8px solid fuchsia; */
+    border-top-left-radius: 75%;
   }
+  .img-me:hover {
+    box-shadow: 0 0 14px rgb(66, 1, 68);
+    border: 2px solid rgb(153, 38, 147);
+    animation: img-me 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+
+  .typing-animation {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  /*----------style to about me----- */
+  .container_sobremi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sobre-mi {
+    width: 90%;
+  }
+  /*----------style to skillssss--------*/
+  #skills li {
+    list-style: none;
+  }
+  .container_all {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+  }
+  #skills {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-bottom: 8px solid black;
+    padding-bottom: 2em;
+  }
+  .list {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 25px;
+    place-items: center;
+
+  }
+
+  .hard_skills {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  
+/* seguimos con pantalla notebook */
+.items{
+  border: 2px solid black;
+  padding: 8px;
+  border-radius: 20px;
+  margin: 10px;
+  text-align: center;
+  
 }
+/*-----------style to contacto---------------*/
+
+#contacto{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.container_contact{
+  width: 90%;
+
+}
+.contact{
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+
+}
+.botones{
+  margin: 5px;
+  
+}
+.botones button{
+  background-color: #bfd5bf;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+.botones img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
+}
+
+
+
 
 /* Estilos para pantallas grandes (desktops) */
 @media (min-width: 1024px) {
@@ -187,20 +332,23 @@ footer {
   .text-inicio {
     display: inline;
     align-content: center;
-    margin-right: 40%;
+    margin-right: 20%;
   }
   .img-me {
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
     /* border-top: 4px solid fuchsia;
     border-right: 8px solid fuchsia; */
     border-top-left-radius: 75%;
   }
   .img-me:hover {
     box-shadow: 0 0 14px rgb(66, 1, 68);
-    border: 4px solid rgb(78, 1, 74);
-    animation: img-me 3s linear infinite;
+    border: 2px solid rgb(153, 38, 147);
+    animation: img-me 1s linear infinite;
     animation-delay: 0.5s;
+  }
 
+  #sobre-mi {
+    width: 90%;
   }
 }
