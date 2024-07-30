@@ -7,137 +7,168 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    
-      <nav>
-        <ul>
-          <li class="nav"><a href="#inicio">Inicio</a></li>
-          <li class="nav"><a href="#sobre-mi">Sobre mí</a></li>
-          <li class="nav"><a href="#skills">Skills</a></li>
-          <li class="nav"><a href="#portafolio">Portafolio</a></li>
-          <li class="nav"><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-      <header >
-          <div id="inicio">
-          <div class="text-inicio">
-            <h1>¡Hola!</h1>
-            <p>Soy Agostina</p>
-            <strong>desarroladora Full-Stack</strong>
-          </div>
-            <div >
-              <img class="img-me" src="./img/yo2.jpg" alt="Agos" width="400px" height="500px" >
-            </div>
-          </div>
-    </header>
-    <main>
-      <!--Presentacion-->
-      <section id="sobre-mi">
-        <h2>Sobre mi</h2>
-        <p>
-          Soy una programadora junior apasionada por la programación con
-          conocimientos en los lenguajes y actualmente me encuentro estudiando
-          una Ingeniería en Sistemas en la universidad nacional de la matanza.
-          Busco formar parte de una empresa en donde pueda poner en práctica
-          todos mis conocimientos e ir creando nuevos para crecer tanto como en
-          el aspecto personal como en el área laboral. Asimismo, demostrar mi
-          capacidad de aprendizaje, adaptación y decisión en cuanto a lo que se
-          me proponga hacer.
-        </p>
-        <div class="cv">
-          <button>
-            <a href="./img/Ingeniería_en_Informática.pdf" target="_blank"
-              >Descargar CV</a
-            >
-          </button>
-        </div>
-      </section>
-      <!--Lenguajes en linea-->
-      <section id="skills">
-        <div class="container_skills">
-          <h2>SKILLS</h2>
-        <div>
-          <ul>
-            <li class="personal">Ingles nivel INTERMEDIO</li>
-            <li class="personal">Integracion de paquete office</li>
-            <li class="personal">Manejo de AUTOCAD</li>
-          </ul>
-        </div>
-        <div>
-          <h2>Lenguajes que manejo de front</h2>
-          <ul>
-            <li class="front">html5</li>
-            <li class="front">css</li>
-            <li class="front">Bootstrap</li>
-            <li class="front">JavaScript</li>
-            <li class="front">GIT</li>
-          </ul>
-        </div>
-        <div>
-          <h2>Lenguajes que manejo de back</h2>
-          <ul>
-            <li class="front">C</li>
-            <li class="front">MySQL</li>
-            <li class="front">JavaScript</li>
-            <li class="front">Node.js</li>
-          </ul>
-        </div>
+    <!-- MENU DE NAVEGACION -->
+    <nav>
+      <ul>
+        <li class="nav"><a href="#inicio">Inicio</a></li>
+        <li class="nav"><a href="#sobre-mi">Sobre mí</a></li>
+        <li class="nav"><a href="#skills">Skills</a></li>
+        <li class="nav"><a href="#portafolio">Portafolio</a></li>
+        <li class="nav"><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <!-- SALUDO -->
+    <header>
+      <div id="inicio">
+        <div class="text-inicio">
+          <h1>¡Hola!</h1>
+          <p>Soy Agostina</p>
+          <strong class="typing-animation">desarrolladora Full-Stack</strong>
+          <div >
+            <button class="btn">
+              <a href="./img/Ingeniería_en_Informática.pdf" target="_blank"
+                >Descargar CV</a
+              >
+            </button>
         </div>
         
+        </div>
+        <div>
+          <img
+            class="img-me"
+            src="./img/yo2.jpg"
+            alt="Agos"
+            width="400px"
+            height="500px"
+          />
+        </div>
+        
+      </div>
+    </header>
+    <main>
+      <!--SOBRE MI-->
+      <section class="container_sobremi">
+        <div id="sobre-mi">
+          <h2>Sobre mi</h2>
+          <p>
+            Estoy haciendo la Ingenieria en Sistemas en la UNLAM. Me gusta mucho
+            programar en C y estoy viendo la manera de aplicarlo en lo
+            profesional. Mientras tanto estoy puliendo mis habiliades en Python,
+            Javascript, Css, HTML & node.js con express. Me encuentro buscando
+            oportuniades laborales para asi demostrar mi talento y mis ganas de
+            trabajar e independizarme pues aun me bancan mis padres que no me
+            molesta pero en lo personal tengo muchas ganas de trabajar.
+          </p>
+        </div>
+      </section>
+      <!--SKILLS-->
+      <section class="container_all">
+        
+        <div id="skills">
+          <div class="title">
+            <h2>Skills</h2>
+          </div>
+          <div class="hard_skills">
+            <div class="hard_items">
+              <h5>frontend</h3>
+                <div class="list">
+                <li class="items">html5</li>
+                <li class="items">css</li>
+                <li class="items">JavaScript</li>
+                </div>
+              </ul>
+            </div>
+            <div class="hard_items">
+              <h5>backend</h3>
+                <div class="list">
+                <li class="items">C</li>
+                <li class="items">python</li>
+                <li class="items">JavaScript</li>
+                <li class="items">MySQL</li>
+                </div>
+            </div>
+            <div class="hard_items">
+              <h5>herramientas</h3>
+
+                <div class="list">
+                <li class="items">GitHub</li>
+                <li class="items">postman</li>
+                <li class="items">VisualStudio Code</li>
+                <li class="items">codeblocks</li>
+                </div>
+
+            </div>
+          </div>
+        </div>
       </section>
 
       <!--Contacto-->
       <section id="contacto">
-        <h2>Contacto</h2>
-        <div class="email">
-        <h4>EMAIL</h4>
-        <a
-          href="mailto:agostina.guevara@outlook.com?subject=Contacto"
-          target="_blank"
-          >agostina.guevara@outlook.com</a>
-        </div>
-        <div class="wp">
-          <h4>WHATSAPP</h4>
-        <p>11 6184-7533</p>
-        <button>
-          <a href="https://wa.me/1161847533?" target="_blank"
-            >Envíame un mensaje</a
-          >
-        </button>
-        </div>
-        <div class="likedin">
-          <button>
+        <div class="container_contact">
+          <div class="title-contact">
+            <h2>Contacto</h2>
+          </div>
+        <div class="contact">
+          <div class="style-contact">
+            <p>EMAIL</p>
             <a
-              href="https://www.linkedin.com/in/agostina-guevara/"
+              href="mailto:agostina.guevara@outlook.com?subject=Contacto"
               target="_blank"
-              >Linkedin</a>
-          </button>
+              >agostina.guevara@outlook.com</a
+            >
+          </div>
+          <div class="style-contact">
+            <p>TELEFONO</p>
+            <p>11 6184-7533</p>
+          </div>
+          <div class="botones">
+            <button>
+              
+              <a href="https://wa.me/1161847533?" target="_blank"
+                ><div class="img">
+                  <img src=".//img/whats.jpg" alt="">
+                </div></a
+              >
+            </button>
+          </div>
+          <div class="botones">
+            <button>
+              <a
+                href="https://www.linkedin.com/in/agostina-guevara/"
+                target="_blank"
+                ><img src="./img/link.png" alt="linkedin" class="botones"></a
+              >
+            </button>
+          </div>
+        </div>
         </div>
       </section>
+      <!-- FOOTERRR -->
+      <footer>
+        <section class="form-container">
+          <div>
+            <h2>CONTACTAME</h2>
+          </div>
+          <div>
+            <form action="">
+              <label for="name">Nombre</label>
+              <input type="text" name="name" id="name" />
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+              <label for="tel">Telefono</label>
+              <input type="number" name="tel" id="tel" />
+              <label for="motivo">Motivo</label>
+              <input type="text" name="motivo" id="motivo" />
+              <button class="send">Enviar</button>
+            </form>
+          </div>
+          <h5>copyright Guevara Agostina</h5>
+        </section>
+      </footer>
 
-      
+
     </main>
 
-    <footer>
-      <section class="form-container">
-        <div>
-          <h2>CONTACTAME</h2>
-        </div>
-        <div >
-          <form action="">
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" >
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email">
-            <label for="tel">Telefono</label>
-            <input type="number" name="tel" id="tel">
-            <label for="motivo">Motivo</label>
-            <input type="text" name="motivo" id="motivo">
-            <button>Enviar</button>
-  
-          </form>
-        </div>
-        <h5>copyright Guevara Agostina</h5>
-      </section>
-    </footer>
+    
   </body>
 </html>
