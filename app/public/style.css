@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(212, 172, 238);
+
   
 }
 
@@ -52,7 +54,8 @@ h5 {
 /*style to header button cv*/
 .btn a {
   text-decoration: none;
-  color: rgb(31, 5, 5);
+  font-family: monospace;
+  color: rgb(203, 3, 167);
 }
 .btn {
   width: 9em;
@@ -65,7 +68,7 @@ h5 {
   z-index: 1;
   border-radius: 30em;
   cursor: pointer;
-  box-shadow: 6px 6px 12px  #bebcd1 , -6px -6px 12px #662549;
+  box-shadow: 6px 6px 12px  #bebcd1 , -6px -6px 12px #9119a9;
 }
 .btn::before {
   content: "";
@@ -77,8 +80,8 @@ h5 {
   left: 0;
   background-image: linear-gradient(
     to right,
-    #1e136d 0%,
-    #d40ee2 100%
+    #4b0534 0%,
+    #3a013e 100%
   );
   transition: 0.5s ease;
   display: block;
@@ -135,22 +138,36 @@ footer {
     border-radius: 5px;
   }
 
-  #inicio {
-    flex-direction: column;
-    text-align: center;
+  
+  /* style to index text  */
+  h1 {
+    color: #4a148c;
+  }
+  p {
+    color: #aa12d4;
   }
 
+  #inicio {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 3rem;
+  }
   /* Imagen de presentación */
-  .img-me {
+  .img-me  {
     cursor: pointer;
     transition: 0.3s;
-    border-top-left-radius: 75%;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 2rem;
+  }
+  .img-me:hover {
+    box-shadow: 0 0 14px rgb(121, 3, 125);
+    animation: img-me 0.5s linear infinite;
+    animation-delay: 0.5s;
   }
 
-  .img-me:hover {
-    box-shadow: 0 0 14px rgb(66, 1, 68);
-    border: 2px solid rgb(153, 38, 147);
-  }
  
 /* Formulario */
   form {
@@ -376,9 +393,14 @@ footer {
     justify-content: center;
     list-style: none;
   }
-  body {
+  /* body {
     background-color: rgb(212, 172, 238);
+  } */
+  #inicio img{
+    padding: 20px;
+    margin-right: 1rem;
   }
+
 
   /*style to header*/
   #inicio {
@@ -399,12 +421,12 @@ footer {
     margin: 5%;
   }
   /* Imagen de presentación */
-  .img-me {
+  .img-me  {
     cursor: pointer;
     transition: 0.3s;
-    /* border-top: 4px solid fuchsia;
-    border-right: 8px solid fuchsia; */
-    border-top-left-radius: 75%;
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
   }
   .img-me:hover {
     box-shadow: 0 0 14px rgb(66, 1, 68);
@@ -610,4 +632,35 @@ footer {
 
 }
 
+/* min-width 1100px  */
+@media (min-width: 1100px) {
+  
 
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #4a148c;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #aa12d4;
+  }
+
+
+  #inicio img{
+    padding: 20px;
+    margin-right: 3rem;
+
+  }
+
+  .text-inicio{
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+
+}
