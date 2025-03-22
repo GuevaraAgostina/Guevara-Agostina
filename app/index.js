@@ -10,9 +10,9 @@ const app = express();
 const port = 3000;
 
 // Middleware para parsear JSON
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors({
-    origin: 'http://127.0.0.1:5501'
+    origin: '*'
 }));
 
 
@@ -59,7 +59,5 @@ app.post('/send-email', async(req, res) => {
 
 
 
-
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
-  });
+const PORT = port || 8080;
+app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));  

@@ -2,13 +2,13 @@
     "version": 2,
     "builds": [
         {
-            "src": "app/index.js",
+            "src": "api/send-email.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/send-email",
             "dest": "app/index.js"
         }
     ]
