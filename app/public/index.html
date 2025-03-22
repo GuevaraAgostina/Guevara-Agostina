@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guevara Agostina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./style.css" />
+
   </head>
   <body>
     <!-- MENU DE NAVEGACION -->
@@ -36,7 +38,7 @@
         <div>
           <img
             class="img-me"
-            src="./img/yo2.jpg"
+            src="../img/yo2.jpg"
             alt="Agos"
             width="400px"
             height="500px"
@@ -91,7 +93,7 @@
               <h5>herramientas</h3>
 
                 <div class="list">
-                <li class="items">GitHub</li>
+                <li class="items">Git</li>
                 <li class="items">postman</li>
                 <li class="items">VisualStudio Code</li>
                 <li class="items">codeblocks</li>
@@ -102,69 +104,43 @@
         </div>
       </section>
 
-      <!--Contacto-->
-      <section id="contacto">
-        <div class="container_contact">
-          <div class="title-contact">
-            <h2>Contacto</h2>
-          </div>
-        <div class="contact">
-          <div class="style-contact">
-            <p>EMAIL</p>
-            <a
-              href="mailto:agostina.guevara@outlook.com?subject=Contacto"
-              target="_blank"
-              >agostina.guevara@outlook.com</a
-            >
-          </div>
-          <div class="style-contact">
-            <p>TELEFONO</p>
-            <p>11 6184-7533</p>
-          </div>
-          <div class="botones">
-            <button>
-              
-              <a href="https://wa.me/1161847533?" target="_blank"
-                ><div class="img">
-                  <img src=".//img/whats.jpg" alt="">
-                </div></a
-              >
-            </button>
-          </div>
-          <div class="botones">
-            <button>
-              <a
-                href="https://www.linkedin.com/in/agostina-guevara/"
-                target="_blank"
-                ><img src="./img/link.png" alt="linkedin" class="botones"></a
-              >
-            </button>
-          </div>
-        </div>
-        </div>
+      
       </section>
       <!-- FOOTERRR -->
       <footer>
-        <section class="form-container">
-          <div>
-            <h2>CONTACTAME</h2>
+        <section id="contacto" class="form-container">
+          <div class="title">
+            <h2>Contactame</h2>
           </div>
-          <div>
+          <div class="form">
             <form action="">
               <label for="name">Nombre</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" placeholder="Nombre" />
               <label for="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="text" name="email" id="email" placeholder="Ingrese su email" />
               <label for="tel">Telefono</label>
-              <input type="number" name="tel" id="tel" />
+              <input type="number" name="tel" id="tel" placeholder="Ingrese su telefono"/>
               <label for="motivo">Motivo</label>
-              <input type="text" name="motivo" id="motivo" />
-              <button class="send">Enviar</button>
+              <input type="text" name="motivo" id="motivo" placeholder="Ingrese el motivo de contacto"/>
+              <div id="form-message"></div>
+              <button class="send" type="submit" value="Enviar">Enviar</button>
             </form>
           </div>
-          <h5>copyright Guevara Agostina</h5>
         </section>
+        <div class="btn-social">
+          <ul>
+            <li><a href="https://wa.me/541161847533?" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> </li>
+            <li><a href="mailto:agostina.guevara@outlook.com?subject=Contacto"><i class="fa-brands fa-microsoft"></i></a> </li>
+            <li><a href="https://www.linkedin.com/in/agostina-guevara/"><i class="fa-brands fa-linkedin"></i></a> </li>
+
+          </ul>
+        </div>
+
+        <h5>copyright Guevara Agostina</h5>
+
       </footer>
+
+      <script src="./form.js"></script>
 
 
     </main>
