@@ -151,7 +151,6 @@ footer {
     display: flex;
     flex-direction: row;
     text-align: center;
-    margin: 3rem;
   }
   /* Imagen de presentación */
   .img-me  {
