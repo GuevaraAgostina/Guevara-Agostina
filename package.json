@@ -9,16 +9,17 @@
     "jsonwebtoken": "^9.0.2",
     "nodemailer": "^6.10.0"
   },
-  "name": "porfolio2",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec node app/index.js"
+    "dev": "nodemon --exec node app/index.js",
+    "vercel-build": "echo Hello desde Vercel"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Guevara agostina",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^3.1.9"
   }
