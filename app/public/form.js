@@ -16,7 +16,7 @@ document.querySelector('.send').addEventListener('click', async(e) => {
     }else{
         // Enviar los datos al servidor
         try {
-            const response = await fetch('https://guevara-agostina.vercel.app/send-email', {
+            const response = await fetch('https://guevara-agostina.vercel.app', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
