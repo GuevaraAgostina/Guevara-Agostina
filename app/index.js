@@ -12,7 +12,7 @@ const port = 3000;
 // Middleware para parsear JSON
 app.use(express.json());
 app.use(cors({
-    origin: '*'
+    origin: ['https://guevara-agostina.vercel.app']
 }));
 
 
