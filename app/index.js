@@ -11,9 +11,13 @@ const port = 3000;
 
 // Middleware para parsear JSON
 app.use(express.json());
-app.use(cors({
-    origin: ['https://guevara-agostina.vercel.app']
-}));
+app.use(cors(
+    {
+        origin: ['https://guevara-agostina.vercel.app'],
+        methods: ['GET', 'POST'],
+        allowedHeaders: ['Content-Type']
+    }
+));
 
 
  // Ruta para recibir los datos del formulario
