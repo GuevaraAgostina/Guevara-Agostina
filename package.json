@@ -15,7 +15,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec node app/index.js",
-    "vercel-build": "echo Hello desde Vercel"
+    "vercel-build": "echo Hello desde Vercel",
+    "start": "node app/index.js"
   },
   "keywords": [],
   "author": "Guevara agostina",

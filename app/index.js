@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.EMAIL_PORT || 3000;
 
 // Middleware para parsear JSON
 app.use(express.json());
@@ -18,6 +18,7 @@ app.use(cors(
         allowedHeaders: ['Content-Type']
     }
 ));
+
 
 
  // Ruta para recibir los datos del formulario
