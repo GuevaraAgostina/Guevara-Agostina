@@ -21,7 +21,7 @@ document.querySelector('.send').addEventListener('click', async(e) => {
         try {
             console.log('Enviando datos al servidor...');
             //NO PONEMOS TODA LA URL ya que vercel gestiona automaticamente el dominio
-            const response = await fetch('/send-email', {
+            const response = await fetch('https://guevara-agostina.vercel.app/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -30,7 +30,10 @@ document.querySelector('.send').addEventListener('click', async(e) => {
             });
             console.log('Datos enviados al servidor...');
 
-            const result = await response.json();
+            // Verificamos si la respuesta tiene un cuerpo JSON
+            const result = await response.json(); // Aquí aseguramos que es un JSON
+
+            console.log('Respuesta del servidor:', result);
 
             if (response.status === 200) {
                 messageDiv.textContent = 'Correo enviado correctamente';
@@ -40,6 +43,7 @@ document.querySelector('.send').addEventListener('click', async(e) => {
             }
         } catch (error) {
             messageDiv.textContent = 'Error en la conexión con el servidor';
+            console.error('Error en la conexión con el servidor: ', error);
         }
         messageDiv.classList.add('show');
     }
