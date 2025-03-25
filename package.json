@@ -20,7 +20,7 @@
   },
   "keywords": [],
   "author": "Guevara agostina",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.9"
   }

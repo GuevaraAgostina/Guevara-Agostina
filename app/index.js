@@ -7,26 +7,16 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-const port = process.env.EMAIL_PORT || 3000;
+const port =3000;
 
 // Middleware para parsear JSON
 app.use(express.json());
-app.use(cors(
-    {
-        origin: ['https://guevara-agostina.vercel.app'],
-        methods: ['GET', 'POST'],
-        allowedHeaders: ['Content-Type']
-    }
-));
-
-
-
- // Ruta para recibir los datos del formulario
+app.use(cors());
+// Ruta para recibir los datos del formulario
 app.post('/send-email', async(req, res) => {
     
     const { name, email, tel, motivo } = req.body;
-    console.log('Datos recibidos: ', name, email, tel, motivo);
-
+    console.log("datos recibidos:",name, email, tel, motivo);
     try {
         // Configurar transporte de correo
          // Configurar el transportador de Nodemailer
@@ -50,13 +40,12 @@ app.post('/send-email', async(req, res) => {
             subject: 'Nuevo mensaje de contacto del portfolio',
             text: `Nombre: ${name}\nEmail: ${email}\nTel: ${tel}\nMotivo: ${motivo}`,
         };
-        console.log("from:",mailOptions.from)
         // Enviar el correo
         const info = await transporter.sendMail(mailOptions);
 
         res.status(200).json({ message: 'Correo enviado' });
     } catch (error) {
-        console.error('Error al enviar correo: ', error);
+        console.error('Error al enviar correo: ', error);//muestro el error
         res.status(500).json({ error: 'Error al enviar correo' });
     }
 
@@ -64,7 +53,5 @@ app.post('/send-email', async(req, res) => {
 
 
 
-// const PORT = port || 8080;
-// app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));  
-module.exports = app;
-console.log("Servidor corriendo");
+const PORT = port || 8080;
+app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));  
