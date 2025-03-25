@@ -20,7 +20,8 @@ document.querySelector('.send').addEventListener('click', async(e) => {
         // Enviar los datos al servidor
         try {
             console.log('Enviando datos al servidor...');
-            const response = await fetch('http://localhost:3000/send-email', {
+            //NO PONEMOS TODA LA URL ya que vercel gestiona automaticamente el dominio
+            const response = await fetch('/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,7 +29,7 @@ document.querySelector('.send').addEventListener('click', async(e) => {
                 body: JSON.stringify({ name, email, tel, motivo }),
             });
             console.log('Datos enviados al servidor...');
-            
+
             const result = await response.json();
 
             if (response.status === 200) {
