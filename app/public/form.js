@@ -21,7 +21,7 @@ document.querySelector('.send').addEventListener('click', async(e) => {
         try {
             console.log('Enviando datos al servidor...');
             //NO PONEMOS TODA LA URL ya que vercel gestiona automaticamente el dominio
-            const response = await fetch('https://guevara-agostina.vercel.app/send-email', {
+            const response = await fetch('/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -29,6 +29,7 @@ document.querySelector('.send').addEventListener('click', async(e) => {
                 body: JSON.stringify({ name, email, tel, motivo }),
             });
             console.log('Datos enviados al servidor...');
+            console.log('Respuesta del servidor:', response);
 
             // Verificamos si la respuesta tiene un cuerpo JSON
             const result = await response.json(); // Aquí aseguramos que es un JSON
