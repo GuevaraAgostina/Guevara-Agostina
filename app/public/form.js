@@ -29,7 +29,7 @@ document.querySelector('.send').addEventListener('click', async(e) => {
                 body: JSON.stringify({ name, email, tel, motivo }),
             });
             console.log('Datos enviados al servidor...');
-            console.log('Respuesta del servidor:', response);
+            console.log('Respuesta del servidor:', response.status);
 
             // Verificamos si la respuesta tiene un cuerpo JSON
             const result = await response.json(); // Aquí aseguramos que es un JSON
