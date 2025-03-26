@@ -21,7 +21,7 @@ document.querySelector('.send').addEventListener('click', async(e) => {
         try {
             console.log('Enviando datos al servidor...');
             //NO PONEMOS TODA LA URL ya que vercel gestiona automaticamente el dominio
-            const response = await fetch('/send-email', {
+            const response = await fetch('/app/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
