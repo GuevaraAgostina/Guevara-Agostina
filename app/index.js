@@ -16,7 +16,7 @@ app.use(cors({
     origin: '*'
 }));
 // Ruta para recibir los datos del formulario
-app.post('/send-email', async(req, res) => {
+app.post('https://guevara-agostina.vercel.app/send-email', async(req, res) => {
     
     const { name, email, tel, motivo } = req.body;
     console.log("datos recibidos:",name, email, tel, motivo);
